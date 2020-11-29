@@ -14,6 +14,7 @@ CREATE TABLE IF NOT EXISTS `notesdb`.`user` (
   `last_name` VARCHAR(20) NOT NULL,
   `password` VARCHAR(20) NOT NULL,
   `role` INT(11) NOT NULL,
+  `reset_password_uuid` VARCHAR(50),
   PRIMARY KEY (`email`),
   CONSTRAINT `fk_user_role`
     FOREIGN KEY (`role`)
@@ -40,6 +41,8 @@ INSERT INTO `user` (`email`,`active`,`first_name`,`last_name`,`password`,`role`)
 	VALUES ('cprg352+anne@gmail.com', true, 'Anne','Annerson', 'password', 2);
 INSERT INTO `user` (`email`,`active`,`first_name`,`last_name`,`password`,`role`)
 	VALUES ('cprg352+barb@gmail.com', true, 'Barb','Barber', 'password', 2);
+INSERT INTO `user` (`email`,`active`,`first_name`,`last_name`,`password`,`role`)
+	VALUES ('JunYoung.Won@edu.sait.ca', true, 'Barb','Barber', 'password', 2);
 
 INSERT INTO `note` (`Title`, `Contents`, `Owner`)
     VALUES ('Quote #1', 'Writing is nature''s way of letting you know how sloppy your thinking is.', 'cprg352+anne@gmail.com');

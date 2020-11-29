@@ -24,6 +24,10 @@
         <servlet-name>AdminServlet</servlet-name>
         <servlet-class>servlets.AdminServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ResetPasswordServlet</servlet-name>
+        <servlet-class>servlets.ResetPasswordServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>NoteServlet</servlet-name>
         <url-pattern>/notes</url-pattern>
@@ -36,6 +40,10 @@
         <servlet-name>AdminServlet</servlet-name>
         <url-pattern>/admin</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ResetPasswordServlet</servlet-name>
+        <url-pattern>/reset</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
@@ -44,4 +52,14 @@
     <welcome-file-list>
         <welcome-file>login</welcome-file>
     </welcome-file-list>
+    <env-entry>
+        <env-entry-name>webmail-username</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>webapptest77@gmail.com</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <env-entry-name>webmail-password</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>2cmpWqyM3BEeYxx</env-entry-value>
+    </env-entry>
 </web-app>
